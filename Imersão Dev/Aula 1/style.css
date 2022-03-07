@@ -1,0 +1,25 @@
+body {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://images.vexels.com/media/users/3/205996/isolated/preview/81d3f60bca6d3b2cbef6ba1ff1e0b4f7-desenho-de-calculadora-fofo.png');
+    background-color: rgb(12, 85, 61);
+    background-size: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 15px;
+    height: 700px;
+  }
+  
+  .page-title { 
+    color: coral;   
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: rgb(175, 106, 80);
+    margin-top: 5px;
+  }
