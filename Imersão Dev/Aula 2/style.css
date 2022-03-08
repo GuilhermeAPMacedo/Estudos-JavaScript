@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 400px;
+  background-image: url("images/fundo.png");
+  background-color: aquamarine;
+  background-size: 300px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: black;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: black;
+  margin-top: 5px;
+}
+
+input {
+  margin: 12px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+label {
+  color: brown;
+}
+
+button {
+  color: beige;
+  margin-top: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: coral;
+}
+
+h3 {
+  color: brown;
+  font-size: 30px;
+}
