@@ -1,51 +1,36 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 200px;
-    background-image: url("https://img.freepik.com/vetores-gratis/estatueta-da-sorte-dos-desenhos-animados-do-vetor-gato-da-sorte-japonesa-isolada-no-fundo_97231-2539.jpg?size=338&ext=jpg");
-    background-color: aquamarine;
-    background-size: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-  }
-  
-  .page-title {
-    color: brown;
-    margin: 0 0 5px;
-  }
-  
-  .page-subtitle {
-    color: coral;
-    margin-top: 16px;
-  }
-  
-  @media (max-height: 500px) {
-    body {
-      min-height: 800px;
-    }
-  }
-  
-  input {
-    margin: 4px;
-    padding: 6px;
-    border-radius: 5px;
-  }
-  
-  button {
-    margin-top: 12px;
-    padding: 4px 8px;
-    border-radius: 5px;
-    background: cornflowerblue;
-  }
-  
-  .resultado {
-    color: crimson;
-    text-align: center;
-    margin-top: 250px;
-  }
-  
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: cadetblue;
+  background-size: 200px;
+  background-position: 50% -100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: black;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: rgb(102, 41, 19);
+  margin-top: 5px;
+}
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 300px;
+  max-width: 300px;
+  margin: 10px;
+}
+.botao{
+  margin: 20px;
+  background-color: rgb(224, 134, 152);
+}
