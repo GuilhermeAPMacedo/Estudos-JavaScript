@@ -1,0 +1,43 @@
+var listaFilmes = [];
+var nomeFilmes = [];
+var exibirFilmes = document.getElementById("listaFilmes");
+function adicionarFilme(){  
+    var filme = document.getElementById("filme").value;
+    var nomeFilme = document.getElementById("nomeFilme").value;
+    exibirFilmes.innerHTML ='';
+    if (filme.endsWith(".jpg")||filme.endsWith(".png")||filme.endsWith(".jpeg")){        
+        verificaAdicao(filme,nomeFilme)
+    }else{
+       console.error("Endereço de filme inválido"); 
+    }
+    document.getElementById("filme").value = '';
+    document.getElementById("nomeFilme").value = '';
+    mostrarNaTela();
+ }
+
+ function verificaAdicao(url,nome){
+    if(listaFilmes.includes(url) || nomeFilmes.includes(nome)){
+        alert("Filme já adicionado!");
+    }else{
+        listaFilmes.push(url);
+        nomeFilmes.push(nome);
+    }
+ }
+
+ function mostrarNaTela(){
+    for(var i=0;i<listaFilmes.length;i++){
+        exibirFilmes.innerHTML += "<div class=formatImage><img src=" + listaFilmes[i] + "> <p class=legenda>" + nomeFilmes[i] +"</p></div>" ;
+    }
+ }
+
+ function removerFilme(){
+    var filme = document.getElementById("filme").value;
+    var nomeFilme = document.getElementById("nomeFilme").value;
+    exibirFilmes.innerHTML ='';    
+    if(listaFilmes.includes(filme) && nomeFilmes.includes(nomeFilme)){
+        console.log("Aqui!")
+    }else{
+        alert("É necessário digitar corretamente o nome e a URL do filme que deseja excluir!")
+    }
+    mostrarNaTela()
+ }
