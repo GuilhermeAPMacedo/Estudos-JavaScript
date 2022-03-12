@@ -8,7 +8,7 @@ function adicionarFilme(){
     if (filme.endsWith(".jpg")||filme.endsWith(".png")||filme.endsWith(".jpeg")){        
         verificaAdicao(filme,nomeFilme)
     }else{
-       console.error("Endereço de filme inválido"); 
+       alert("Endereço de filme inválido"); 
     }
     document.getElementById("filme").value = '';
     document.getElementById("nomeFilme").value = '';
@@ -34,10 +34,17 @@ function adicionarFilme(){
     var filme = document.getElementById("filme").value;
     var nomeFilme = document.getElementById("nomeFilme").value;
     exibirFilmes.innerHTML ='';    
-    if(listaFilmes.includes(filme) && nomeFilmes.includes(nomeFilme)){
-        console.log("Aqui!")
-    }else{
-        alert("É necessário digitar corretamente o nome e a URL do filme que deseja excluir!")
+    if(nomeFilmes.includes(nomeFilme)){
+        listaFilmes.splice(nomeFilmes.indexOf(nomeFilme),1)
+        nomeFilmes.splice(nomeFilmes.indexOf(nomeFilme),1)  
+    }else if(listaFilmes.includes(filme)){
+        nomeFilmes.splice(listaFilmes.indexOf(filme),1)
+        listaFilmes.splice(listaFilmes.indexOf(filme),1)        
     }
+    else{
+        alert("É necessário digitar corretamente o nome ou a URL do filme que deseja excluir!")
+    }
+    document.getElementById("filme").value = '';
+    document.getElementById("nomeFilme").value = '';
     mostrarNaTela()
  }
