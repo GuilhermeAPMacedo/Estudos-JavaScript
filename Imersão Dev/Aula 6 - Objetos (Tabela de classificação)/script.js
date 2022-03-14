@@ -1,13 +1,13 @@
 var jogadores = [
-    rafa = {
-    nome: "Rafa",
+    {
+    nome: "Guilherme",
     vitorias: 2,
     empates: 1,
     derrotas: 1,
     pontos: 0
     },
-    paulo = {
-    nome: "Paulo",
+    {
+    nome: "Antonio",
     vitorias: 1,
     empates: 1,
     derrotas: 2,
@@ -37,10 +37,8 @@ function exibeJogadores(jogadores){
     }
     tabela.innerHTML = elemento;
 }
-
 function adicionarVitoria(i){
-    var jogador = jogadores[i]
-    jogador.vitorias ++;
+    jogadores[i].vitorias ++;
     exibeJogadores(jogadores)
 }
 function adicionarEmpate(i){
@@ -52,4 +50,26 @@ function adicionarDerrota(i){
     var jogador = jogadores[i]
     jogador.derrotas ++;
     exibeJogadores(jogadores)
+}
+function inserirNovo(){
+    var nomeNovo = document.getElementById("inserir").value;
+    if(nomeNovo.length >=3){
+        if(jogadores.includes(nomeNovo)){
+            alert("Nome já inserido");
+        }else{
+            jogadores.push({nome: nomeNovo,vitorias:0,empates: 0,derrotas: 0,pontos: 0});
+        }
+    }else{
+        alert("É necessário inserir um nome válido")
+    }    
+    exibeJogadores(jogadores);
+    document.getElementById("inserir").value = "";
+}
+function zerarTabela(){
+    for(jogador of jogadores){
+        jogador.vitorias = 0;
+        jogador.empates = 0;
+        jogador.derrotas = 0;
+    }
+    exibeJogadores(jogadores);
 }

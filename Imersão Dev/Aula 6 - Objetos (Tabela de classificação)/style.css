@@ -37,9 +37,16 @@ h1 {
   color: white;
 }
 
+h4{
+  color: white;
+}
+
 th,
 tr,
 td {
   border: solid 1px white;
   color: white;
+}
+.botaoZerar{
+  margin: 10px;
 }
