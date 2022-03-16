@@ -26,19 +26,13 @@ function adicionarCarta(){
 }
 
 function sortearCarta(){
-    if(pontosJogador == 3){
-        alert("Você venceu!!!")
-    }else if(pontosMaquina == 3){
-        alert("Você perdeu! :(")
-    }else{
-        cartaMaquina = retornaCartaAleatoria();
-        cartaJogador = retornaCartaAleatoria();
-        document.getElementById("btnSortear").disabled = true;
-        document.getElementById("btnAdicionar").disabled = true;
-        document.getElementById("btnJogar").disabled = false;
-        limpaTela();
-        exibirCarta(cartaJogador,exibirJogador);
-    }    
+    cartaMaquina = retornaCartaAleatoria();
+    cartaJogador = retornaCartaAleatoria();
+    document.getElementById("btnSortear").disabled = true;
+    document.getElementById("btnAdicionar").disabled = true;
+    document.getElementById("btnJogar").disabled = false;
+    limpaTela();
+    exibirCarta(cartaJogador,exibirJogador);  
 }
 
 function retornaCartaAleatoria(){
